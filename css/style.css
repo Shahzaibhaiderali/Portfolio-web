@@ -348,14 +348,158 @@
     line-height: 25px;
     color: var(--text-black-700);
  }
-
  .about .about-content .personal-info{
     flex: 0 0 60%;
     max-width: 60%;
     margin-top: 40px;
+}
+
+.about .about-content .skills{
+    flex: 40%;
+    max-width: 40%;
+}
+
+
+ .about .about-content .personal-info .info-item{
+    flex: 0 0 60%;
+    max-width: 60%;
+    
  }
- .about .about-content .skills{
-    flex: 0 0 40px;
-    max-width: 40px;
+ .about .about-content .personal-info .info-item p{
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-50);
+ }
+ .about .about-content .personal-info .info-item p span{
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+ }
+ .about .about-content .personal-info .buttons{
+    margin-top: 30px;
+ }
+ .about .about-content .personal-info .buttons .btn{
+    margin-right: 15px;
+    margin-top: 10px;
+ }
+ .about .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .about-content .personal-info {
+    flex: 0 0 calc(60% - 20px); /* Adjust the width as needed */
+    max-width: calc(60% - 20px);
     margin-top: 40px;
- }
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--skin-color);
+}
+
+.about .about-content .about-img {
+    flex: 0 0 calc(40% - 20px); /* Adjust the width as needed */
+    max-width: calc(40% - 20px);
+}
+
+.about .about-content .my-img img {
+    width: 100%; /* Make the image fill its container */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+.about-img {
+    position: relative;
+}
+
+.about-img::after {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    right: 20px;
+    bottom: 20px;
+}
+
+.about-img::before {
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    left: 20px;
+    top: 20px;
+}
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Create a container for the skills section */
+#skills {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--bg-black-700);
+}
+
+/* Style for the skills container */
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Style for each skill item */
+.skill {
+    width: calc(33.3333% - 20px); /* 3 items per row with spacing */
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--bg-black-900);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Style for the skill title */
+.skill h1 {
+    color: var(--text-black-700);
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* Style for the rating container */
+.rating-container {
+    background-color: var(--skin-color);
+    height: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Style for the rating bar */
+.rating {
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+    font-size: 14px;
+    transition: width 1s ease; /* Smooth transition effect */
+}
+
+
+
+/* Hover effect for the rating bar */
+.skill:hover .rating {
+    width: 50%; /* Decrease the width on hover */
+}
+
